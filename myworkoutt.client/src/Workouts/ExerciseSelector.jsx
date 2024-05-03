@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 
 const ExerciseSelector = ({ onExerciseSelect }) => {
-    const exercises = ["DEADLIFT", "SQUAT", "BENCH PRESS"];
+    const exercises = ["DEADLIFT", "SQUAT", "BENCH PRESS", "TEST"];
 
     return (
         <select onChange={e => onExerciseSelect(e.target.value)}>

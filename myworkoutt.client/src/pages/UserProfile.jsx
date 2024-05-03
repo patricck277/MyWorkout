@@ -1,8 +1,8 @@
 ﻿import React, { useState, useEffect } from 'react';
+import './UserProfile.css';
 
 const UserProfile = () => {
     const [user, setUser] = useState(null);
-    const [activities, setActivities] = useState([]); // State to store user activities
     const [trainings, setTrainings] = useState([]); // State to store training history
 
     useEffect(() => {
@@ -23,28 +23,28 @@ const UserProfile = () => {
         <div className="background-image">
             <div className="text-content">
                 {user ? (
-                    <div>
+                    <div className="user-profile">
                         <h1>User Profile</h1>
                         <p>Username: {user.username}</p>
                         <h2>Training History</h2>
                         {trainings.length > 0 ? (
-                            <ul>
+                            <div className="training-history">
                                 {trainings.map((training, index) => (
-                                    <li key={index}>
-                                        <h3>Date: {training.date}</h3>
+                                    <div key={index} className="training-session">
+                                        <h3>Date: {new Date(training.date).toLocaleString('pl-PL', { timeZone: 'UTC', dateStyle: 'short', timeStyle: 'short' })}</h3>
                                         {training.exercises.map((exercise, exIndex) => (
-                                            <div key={exIndex}>
+                                            <div key={exIndex} className="exercise-detail">
                                                 <h4>{exercise.exercise}</h4>
-                                                <ul>
+                                                <div>
                                                     {exercise.sets.map((set, setIdx) => (
-                                                        <li key={setIdx}>Reps: {set.reps}, Weight: {set.weight}</li>
+                                                        <span key={setIdx}>Reps: {set.reps}, Weight: {set.weight} | </span>
                                                     ))}
-                                                </ul>
+                                                </div>
                                             </div>
                                         ))}
-                                    </li>
+                                    </div>
                                 ))}
-                            </ul>
+                            </div>
                         ) : (
                             <p>No training history.</p>
                         )}

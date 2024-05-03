@@ -21,7 +21,7 @@ const TrainingSession = () => {
             exercises: exerciseHistory,
         };
 
-        // Dodaj aktualne ćwiczenie do historii, jeśli nie jest puste
+        // Dodaj jesli nie jest puste
         if (currentExercise) {
             addExerciseToHistory(currentExercise, sets);
             setCurrentExercise('');
@@ -33,8 +33,8 @@ const TrainingSession = () => {
         storedTrainings.push(trainingData);
         localStorage.setItem('trainings', JSON.stringify(storedTrainings));
 
-        // Opcjonalnie: Przenieś użytkownika do strony profilu
-       // navigate('/profile');
+        // Opcjona
+        // navigate('/profile');
     };
 
     const handleExerciseSelect = exercise => {
@@ -42,7 +42,7 @@ const TrainingSession = () => {
             addExerciseToHistory(currentExercise, sets);
         }
         setCurrentExercise(exercise);
-        setSets([]); // Resetuj serie przy zmianie ćwiczenia
+        setSets([]); // Resetuj serie przy zmianie cw
     };
 
     const addSet = set => {
@@ -59,24 +59,24 @@ const TrainingSession = () => {
         <div className="background-image training-session-container">
             <div className="text-content">
                 <div className="training-form">
-                <h1>Training Session</h1>
-                {!isActive && <button onClick={startTraining}>Start Training</button>}
+                    <h1>Training Session</h1>
+                    {!isActive && <button onClick={startTraining}>Start Training</button>}
                     <Timer isActive={isActive} className="timer-display" />
-                {isActive && (
-                    <>
-                        <ExerciseSelector onExerciseSelect={handleExerciseSelect} />
-                        {currentExercise && (
-                            <>
-                                <SetsRecorder onAddSet={addSet} />
-                                <button onClick={() => {
-                                    addExerciseToHistory(currentExercise, sets); // Zapisz ćwiczenie przed zakończeniem
-                                    setCurrentExercise('');
-                                    setSets([]);
-                                }}>End Current Exercise</button>
-                            </>
-                        )}
-                        <button onClick={endTraining}>End Training</button>
-                        {exerciseHistory.length > 0 && (
+                    {isActive && (
+                        <>
+                            <ExerciseSelector onExerciseSelect={handleExerciseSelect} />
+                            {currentExercise && (
+                                <>
+                                    <SetsRecorder onAddSet={addSet} />
+                                    <button onClick={() => {
+                                        addExerciseToHistory(currentExercise, sets); // Zapisz cw
+                                        setCurrentExercise('');
+                                        setSets([]);
+                                    }}>End Current Exercise</button>
+                                </>
+                            )}
+                            <button onClick={endTraining}>End Training</button>
+                            {exerciseHistory.length > 0 && (
                                 <div className="training-summary">
                                     <h3>Training Summary:</h3>
                                     {exerciseHistory.map((item, index) => (
@@ -90,9 +90,9 @@ const TrainingSession = () => {
                                         </div>
                                     ))}
                                 </div>
-                        )}
-                    </>
-                )}
+                            )}
+                        </>
+                    )}
                 </div>
             </div>
         </div>

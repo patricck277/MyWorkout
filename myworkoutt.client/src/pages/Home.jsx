@@ -79,7 +79,7 @@ const Home = () => {
                                     <Card.Text>
                                         Dive into a diverse world of fitness with our custom programs, tailored to fit every goal and lifestyle. Whether you’re a beginner or a seasoned athlete, check it.
                                     </Card.Text>
-                                    <Button variant="dark" href="/workouts">Get Started</Button>
+                                    <Button variant="dark" href="/programs">Get Started</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -91,7 +91,7 @@ const Home = () => {
                                     <Card.Text>
                                         Fuel your fitness journey with our expert nutrition guidance. Transform your eating habits with personalized meal plans that complement your workout routine.
                                     </Card.Text>
-                                    <Button variant="dark" href="/workouts">Get Started</Button>
+                                    <Button variant="dark" href="/nutrition">Get Started</Button>
                                 </Card.Body>
                             </Card>
                         </Col>

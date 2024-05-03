@@ -17,15 +17,19 @@ export const UserProvider = ({ children }) => {
         setUser(null);
     };
     // Dodane do przesylania danych
-    const updateUserTrainingData = (newData) => {
-        setUser(prevState => ({
-            ...prevState,
-            trainingSessions: [...prevState.trainingSessions, newData]
-        }));
-    }
+    const updateTrainingData = (newData) => {
+        const storedUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (storedUser && storedUser.username) {
+            const key = `${storedUser.username}-exerciseHistory`;
+            const existingHistory = JSON.parse(localStorage.getItem(key)) || [];
+            const updatedHistory = [...existingHistory, newData];
+            localStorage.setItem(key, JSON.stringify(updatedHistory));
+            console.log('Updated training data for:', storedUser.username);
+        }
+    };
 
     return (
-        <UserContext.Provider value={{ user, login, logout }}>
+        <UserContext.Provider value={{ user, login, logout, updateTrainingData }}>
             {children}
         </UserContext.Provider>
     );
