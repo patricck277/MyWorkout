@@ -1,0 +1,51 @@
+﻿
+.counter {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+    .counter h3 {
+        margin: 0;
+        font-size: 3em;
+        color: #000000;
+    }
+
+    .counter p {
+        margin: 0;
+        font-size: 1.5em;
+        color: #000000;
+    }
+
+
+
+.lead {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    margin-left: 2rem; 
+    margin-right: 2rem; 
+}
+.text-center h2 {
+    font-size: 2.5rem;
+}
+
+
+.hero-text h1 {
+    font-size: 3.5rem;
+}
+
+
+@media (max-width: 900px) {
+    .hero-text,
+    .hero-image {
+        padding-bottom: 10rem;
+        padding-left: 10rem;
+        padding-right: 1rem;
+    }
+}
+
+

@@ -1,0 +1,38 @@
+﻿
+.navbar-brand-custom {
+    font-size: 1.5rem; 
+    color: white !important; 
+}
+
+.nav-link-custom {
+    font-size: 1.5rem; 
+    color: white !important; 
+}
+
+
+.px-md-5 {
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+}
+
+@media (max-width: 991px) {
+    
+    .px-md-5 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+.nav-link-custom.dropdown-custom {
+    color: white !important;
+}
+
+.nav-link-custom.dropdown-custom .dropdown-menu {
+    background-color: black; 
+    }
+
+.nav-link-custom.dropdown-custom .dropdown-menu .dropdown-item {
+     color: white !important; 
+        }
+
+

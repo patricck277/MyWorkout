@@ -1,0 +1,13 @@
+﻿
+.login-button {
+    color: black; /* Ustawienie koloru tekstu na czarny */
+    background-color: white; /* Tło przycisku, można zmienić */
+    padding: 15px 20px; /* Padding, można dostosować */
+    border: none; /* Brak obramowania */
+    border-radius: 5px; /* Zaokrąglone rogi */
+    cursor: pointer; /* Kursor wskazujący */
+}
+
+    .login-button:hover {
+        background-color: #212529;
+    }

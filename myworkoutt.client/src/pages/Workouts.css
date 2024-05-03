@@ -1,0 +1,66 @@
+﻿.training-session-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.training-form {
+    background-color: #fff; /* Białe tło dla formularza */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+    .training-form h1, .training-form h3 {
+        text-align: center;
+    }
+
+    .training-form button, .training-form input, .training-form select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .training-form button {
+        background-color: black;
+        color: white;
+        border: none;
+    }
+
+.training-summary {
+    margin-top: 20px;
+}
+
+    .training-summary ul {
+        list-style-type: none; /* Usunięcie punktorów */
+        padding: 0;
+    }
+
+    .training-summary li {
+        margin-bottom: 5px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+.training-session-container h1, .training-session-container h3, .training-session-container h4 {
+    color: black; /* Jasny kolor tekstu dla lepszego kontrastu */
+}
+
+.timer-display {
+    color: black; /* Ustawienie koloru tekstu na biały */
+    font-size: 1.5em; /* Ustaw większy rozmiar czcionki dla lepszej widoczności */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+
+.training-summary {
+    color: black; /* Biały kolor tekstu */
+    padding: 15px;
+    border-radius: 5px;
+}
+

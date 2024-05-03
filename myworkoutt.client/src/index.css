@@ -1,0 +1,77 @@
+﻿
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+}
+
+
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 2;
+}
+
+footer {
+    margin-top: auto;
+}
+
+body {
+    background-image: url('../photos/backgroundmy.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.text-center {
+    text-align: center; 
+}
+
+.text-with-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+.background-image {
+    position: relative;
+}
+
+    .background-image::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8); /* Ciemna nakladka */
+        z-index: 1;
+    }
+
+.text-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/* Animacja fadeIn */
+.fadeIn {
+    animation: fadeInAnimation 3.5s forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 4;
+    }
+}
